@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{82DF2CBF-2ABE-4E07-84CC-E105F9FC6685}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{FF545BF3-B3E9-4A8A-BE43-0A253F33DD9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0A61BA1F-D308-41BD-8C23-111A8F4DEE36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.Hosts.Console", "Hosts\MD5OnlineGenerator.Hosts.Console\MD5OnlineGenerator.Hosts.Console.csproj", "{CF36BF58-D08F-425A-9A6A-D0A86C506110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.ServiceInterface", "Server\MD5OnlineGenerator.ServiceInterface\MD5OnlineGenerator.ServiceInterface.csproj", "{29F89F57-87D9-49D2-BCFB-9FBF1246D42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.ServiceModel", "Server\MD5OnlineGenerator.ServiceModel\MD5OnlineGenerator.ServiceModel.csproj", "{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.BusinessLogic", "Server\MD5OnlineGenerator.BusinessLogic\MD5OnlineGenerator.BusinessLogic.csproj", "{894C0213-F315-4ACA-AFAC-657846AF4FEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ADB7E5BC-7591-45A8-BDB5-469A5FE50A8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF36BF58-D08F-425A-9A6A-D0A86C506110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29F89F57-87D9-49D2-BCFB-9FBF1246D42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29F89F57-87D9-49D2-BCFB-9FBF1246D42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29F89F57-87D9-49D2-BCFB-9FBF1246D42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29F89F57-87D9-49D2-BCFB-9FBF1246D42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF36BF58-D08F-425A-9A6A-D0A86C506110} = {82DF2CBF-2ABE-4E07-84CC-E105F9FC6685}
+		{29F89F57-87D9-49D2-BCFB-9FBF1246D42C} = {0A61BA1F-D308-41BD-8C23-111A8F4DEE36}
+		{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4} = {0A61BA1F-D308-41BD-8C23-111A8F4DEE36}
+		{894C0213-F315-4ACA-AFAC-657846AF4FEF} = {0A61BA1F-D308-41BD-8C23-111A8F4DEE36}
+	EndGlobalSection
+EndGlobal
