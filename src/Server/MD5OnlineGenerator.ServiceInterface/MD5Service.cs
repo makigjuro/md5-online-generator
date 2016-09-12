@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 using System.Web;
 using MD5OnlineGenerator.BusinessLogic.Utilities.Interfaces;
 using MD5OnlineGenerator.ServiceModel.Requests;
@@ -25,15 +22,22 @@ namespace MD5OnlineGenerator.ServiceInterface
         [AddHeader(ContentType = MimeTypes.Json)]
         public object Post(MD5Request request)
         {
-            var decodedUrl = HttpUtility.UrlDecode(request.Url);
+            try
+            {
+                var decodedUrl = HttpUtility.UrlDecode(request.Url);
 
-            var content =  _webContentReader.ReadContentFromWebSite(decodedUrl);
+                var content = _webContentReader.ReadContentFromWebSite(decodedUrl);
 
-            var checksum =_checksumGenerator.CalculateHash(content);
+                var checksum = _checksumGenerator.CalculateHash(content);
 
-            var result = new MD5Response() { Checksum = checksum };
+                var result = new MD5Response() {Checksum = checksum};
 
-            return new HttpResult(result, MimeTypes.Json);
+                return new HttpResult(result, MimeTypes.Json);
+            }
+            catch (Exception ex)
+            {
+                throw new HttpError(HttpStatusCode.BadRequest, "There is a problem with server: " + ex.Message);
+            }
         }
     }
 }

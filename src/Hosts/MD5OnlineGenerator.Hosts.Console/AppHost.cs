@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Net;
 using MD5OnlineGenerator.BusinessLogic.Utilities;
 using MD5OnlineGenerator.BusinessLogic.Utilities.Impl;
 using MD5OnlineGenerator.BusinessLogic.Utilities.Interfaces;
 using MD5OnlineGenerator.BusinessLogic.Validation.Impl;
 using MD5OnlineGenerator.BusinessLogic.Validation.Interfaces;
+using MD5OnlineGenerator.Hosts.Console.Utilities;
 using MD5OnlineGenerator.ServiceInterface;
 using ServiceStack;
+using ServiceStack.Host.Handlers;
 using ServiceStack.Validation;
+using ServiceStack.VirtualPath;
 using StructureMap;
 using Container = Funq.Container;
 
@@ -37,6 +41,8 @@ namespace MD5OnlineGenerator.Hosts.Console
                 HandlerFactoryPath = "api",
                 AddRedirectParamsToQueryString = true,
             });
+
+            CustomErrorHttpHandlers[HttpStatusCode.NotFound] = new CustomStaticFileHandler("/404.html");
 
             //Config examples
             Plugins.Add(new ValidationFeature());
