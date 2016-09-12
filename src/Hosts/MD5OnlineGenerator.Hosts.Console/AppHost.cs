@@ -8,6 +8,7 @@ using MD5OnlineGenerator.BusinessLogic.Validation.Interfaces;
 using MD5OnlineGenerator.Hosts.Console.Utilities;
 using MD5OnlineGenerator.ServiceInterface;
 using ServiceStack;
+using ServiceStack.Api.Swagger;
 using ServiceStack.Host.Handlers;
 using ServiceStack.Validation;
 using ServiceStack.VirtualPath;
@@ -46,6 +47,7 @@ namespace MD5OnlineGenerator.Hosts.Console
             Plugins.Add(new ValidationFeature());
             Plugins.Add(new PostmanFeature());
             Plugins.Add(new CorsFeature());
+            Plugins.Add(new SwaggerFeature());
         }
 
         private void ConfigureIoC(Container container)
