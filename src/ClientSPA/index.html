@@ -19,24 +19,33 @@
     <link rel="stylesheet" href=".tmp/site.css" />
 </head>
 <body>
-    <div class="container" ng-controller="MD5 as vm">
+    <div class="container">
+        
         <div class="row row-centered">
-            <div class="col-xs-12" >
-                <h2 class="marginTop">MD5 Online Checksum Generator for websites</h2>
-                <h4 class="marginTop">Enter valid url which will create a checksum from your provided web site content</h4>
-            </div>
-            <div class="col-xs-12" >
-                <section class="url-box cf marginTop">
-                    <input type="text" placeholder="Insert valid url" ng-model="vm.url">
-                    <button ng-click="vm.getMD5ChecksumHandler()" type="button">Generate</button>
-                </section>
-            </div>
-            <div class="col-xs-12" >
-                <section class="marginTop checksum-result">
-                    <label>Generated Checksum is:</label>
-                    <span ng-bind="vm.checksum"></span>
-                </section>
-            </div>
+            <form name="md5form" ng-controller="MD5 as vm" ng-submit="vm.getMD5ChecksumHandler()">
+                <div class="col-xs-12">
+                    <h2 class="marginTop">MD5 Online Checksum Generator for Websites</h2>
+                    <h4 class="marginTop">Enter valid url which will create a checksum from your provided web site content</h4>
+                </div>
+                <div class="col-xs-12">
+                    <section class="url-box cf marginTop">
+                        <input type="url" placeholder="Insert valid url" ng-model="vm.url" required>
+                        <button type="submit">Generate</button>
+                    </section>
+                    <span class="validation-warning" ng-show="md5form.name.$error.required">
+                        You Can't Leave This Field Empty
+                    </span>
+                    <span class="validation-warning" ng-show="md5form.name.$error.url">
+                        Sorry Not a Valid URL, Don't Forget to Use http:// or https://
+                    </span>
+                </div>
+                <div class="col-xs-12">
+                    <section class="marginTop checksum-result">
+                        <label>Generated Checksum is:</label>
+                        <span ng-bind="vm.checksum"></span>
+                    </section>
+                </div>
+            </form>
         </div>
     </div>
 

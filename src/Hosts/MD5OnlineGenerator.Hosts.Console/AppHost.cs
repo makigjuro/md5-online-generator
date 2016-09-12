@@ -44,13 +44,6 @@ namespace MD5OnlineGenerator.Hosts.Console
             Plugins.Add(new CorsFeature());
         }
 
-        //public override RouteAttribute[] GetRouteAttributes(Type requestType)
-        //{
-        //    var routes = base.GetRouteAttributes(requestType);
-        //    routes.Each(x => x.Path = "/api" + x.Path);
-        //    return routes;
-        //}
-
         private void ConfigureIoC(Container container)
         {
             container.Adapter = new StructureMapContainerAdapter();
@@ -60,6 +53,7 @@ namespace MD5OnlineGenerator.Hosts.Console
 
             ObjectFactory.Container.Inject(typeof(IChecksumGenerator), new MD5ChecksumGenerator());
             ObjectFactory.Container.Inject(typeof(IUrlValidator), new UrlValidator());
+            ObjectFactory.Container.Inject(typeof(IWebContentReader), new WebContentReader());
         }
     }
 }

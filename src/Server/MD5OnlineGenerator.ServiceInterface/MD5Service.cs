@@ -14,11 +14,12 @@ namespace MD5OnlineGenerator.ServiceInterface
     public class MD5Service : Service
     {
         private readonly IChecksumGenerator _checksumGenerator;
-        private static string readContents;
+        private readonly IWebContentReader _webContentReader;
 
-        public MD5Service(IChecksumGenerator checksumGenerator)
+        public MD5Service(IChecksumGenerator checksumGenerator, IWebContentReader webContentReader)
         {
             _checksumGenerator = checksumGenerator;
+            _webContentReader = webContentReader;
         }
 
         [AddHeader(ContentType = MimeTypes.Json)]
@@ -26,7 +27,10 @@ namespace MD5OnlineGenerator.ServiceInterface
         {
             var decodedUrl = HttpUtility.UrlDecode(request.Url);
 
-            var checksum =_checksumGenerator.CalculateHash(decodedUrl);
+            var content =  _webContentReader.ReadContentFromWebSite(decodedUrl);
+
+            var checksum =_checksumGenerator.CalculateHash(content);
+
             var result = new MD5Response() { Checksum = checksum };
 
             return new HttpResult(result, MimeTypes.Json);
