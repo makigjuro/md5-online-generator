@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{82DF2CBF-2ABE-4E07-84CC-E105F9FC6685}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{FF545BF3-B3E9-4A8A-BE43-0A253F33DD9F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0A61BA1F-D308-41BD-8C23-111A8F4DEE36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.Hosts.Console", "Hosts\MD5OnlineGenerator.Hosts.Console\MD5OnlineGenerator.Hosts.Console.csproj", "{CF36BF58-D08F-425A-9A6A-D0A86C506110}"
@@ -18,6 +16,28 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.BusinessLogic", "Server\MD5OnlineGenerator.BusinessLogic\MD5OnlineGenerator.BusinessLogic.csproj", "{894C0213-F315-4ACA-AFAC-657846AF4FEF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ADB7E5BC-7591-45A8-BDB5-469A5FE50A8F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClientSPA", "ClientSPA\", "{A6D4DE06-7293-4BF4-86CC-48315AB56E76}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56434"
+		Debug.AspNetCompiler.PhysicalPath = "ClientSPA\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56434\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56434"
+		Release.AspNetCompiler.PhysicalPath = "ClientSPA\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56434\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56434"
+		SlnRelativePath = "ClientSPA\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +61,10 @@ Global
 		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{894C0213-F315-4ACA-AFAC-657846AF4FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
