@@ -34,10 +34,8 @@ namespace MD5OnlineGenerator.Hosts.Console
 
             SetConfig(new HostConfig
             {
-#if DEBUG
                 DebugMode = true,
                 WebHostPhysicalPath = AppConfigurationManager.ClientApplicationVirtualPath.MapServerPath(),
-#endif
                 HandlerFactoryPath = "api",
                 AddRedirectParamsToQueryString = true,
             });

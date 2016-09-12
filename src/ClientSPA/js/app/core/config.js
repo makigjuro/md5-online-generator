@@ -59,7 +59,7 @@
     }
 
     var config = {
-        appErrorPrefix: '[MD5Generator Error] ', 
+        appErrorPrefix: '[MD5Generator Error]', 
         appTitle: 'MD5Generator'
     };
 

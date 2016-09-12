@@ -5,6 +5,25 @@ var del = require('del');
 
 var $ = require('gulp-load-plugins')({lazy : true});
 
+gulp.task('wiredep', function () {
+    var options = config.getWiredepDefaultOptions();
+    var wiredep = require('wiredep').stream;
+
+    return gulp
+        .src(config.index)
+        .pipe(wiredep(options))
+        .pipe($.inject(gulp.src(config.js)))
+        .pipe(gulp.dest(config.client));
+});
+
+gulp.task("inject", ['wiredep', 'styles'], function () {
+
+    return gulp
+        .src(config.index)
+        .pipe($.inject(gulp.src(config.css)))
+        .pipe(gulp.dest(config.client));
+});
+
 gulp.task('vet', function () {
     log('Start with analysing js code');
     
@@ -34,24 +53,6 @@ gulp.task('clean-styles', function (doneCallback){
     log('Clean completed');
 });
 
-gulp.task('wiredep', function() {
-    var options = config.getWiredepDefaultOptions();
-    var wiredep = require('wiredep').stream;
-
-    return gulp
-        .src(config.index)
-        .pipe(wiredep(options))
-        .pipe($.inject(gulp.src(config.js)))
-        .pipe(gulp.dest(config.client));
-});
-
-gulp.task("inject", ['wiredep', 'styles'], function () {
-
-    return gulp
-        .src(config.index)
-        .pipe($.inject(gulp.src(config.css)))
-        .pipe(gulp.dest(config.client));
-});
 
 gulp.task('less-watcher', function() {
     gulp.watch([config.less], ['styles']);

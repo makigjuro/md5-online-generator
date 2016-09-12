@@ -7,7 +7,7 @@
 
     dataservice.$inject = ['$http', '$location', '$q', 'exceptions'];
     /* @ngInject */
-   function dataservice($http, $location, $q, exceptions) {
+    function dataservice($http, $location, $q, exceptions) {
 
         var service = {
             getMD5Checksum: getMD5Checksum

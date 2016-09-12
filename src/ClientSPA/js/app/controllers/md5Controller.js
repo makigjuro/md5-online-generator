@@ -1,8 +1,7 @@
 (function() {
     'use strict';
 
-    angular
-        .module('app')
+    angular.module('app')
         .controller('MD5', MD5);
 
     MD5.$inject = ['dataservice'];
