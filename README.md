@@ -6,7 +6,7 @@ Both the RestAPI and the SPA are hosted inside a Console Application with help o
 
 ## Installation
 
-clone this repository https://github.com/npejo/mysp.git
+clone this repository https://github.com/makigjuro/md5-online-generator.git
 
 
 Install the development dependencies listed in `package.json`
