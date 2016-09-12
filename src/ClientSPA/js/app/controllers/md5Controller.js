@@ -5,9 +5,9 @@
         .module('app')
         .controller('MD5', MD5);
 
-    MD5.$inject = ['$state', 'dataservice'];
+    MD5.$inject = ['dataservice'];
     /* @ngInject */
-    function MD5($state, dataservice) {
+    function MD5(dataservice) {
         var vm = this;
         vm.url = '';
         vm.checksum = '';

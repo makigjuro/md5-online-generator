@@ -87,6 +87,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructureMapContainerAdapter.cs" />
+    <Compile Include="Utilities\CustomStaticFileHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

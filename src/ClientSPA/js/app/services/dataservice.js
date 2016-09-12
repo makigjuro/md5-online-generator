@@ -5,9 +5,9 @@
         .module('app')
         .factory('dataservice', dataservice);
 
-    dataservice.$inject = ['$http', '$location', '$q'];
+    dataservice.$inject = ['$http', '$location', '$q', 'exceptions'];
     /* @ngInject */
-    function dataservice($http, $location, $q, exception, logger) {
+   function dataservice($http, $location, $q, exceptions) {
 
         var service = {
             getMD5Checksum: getMD5Checksum
@@ -27,7 +27,7 @@
                 })
                 .then(getMD5ChecksumComplete)
                 .catch(function(message) {
-                    exception.catcher('XHR Failed for getMD5Checksum')(message);
+                    exceptions.catcher('XHR Failed for getMD5Checksum')(message);
                     $location.url('/');
                 });
         }
