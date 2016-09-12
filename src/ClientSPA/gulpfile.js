@@ -5,6 +5,17 @@ var del = require('del');
 
 var $ = require('gulp-load-plugins')({lazy : true});
 
+gulp.task('optimize', ['inject'], function() {
+    log('Start Task for Optimization of all file');
+
+    return gulp
+        .src(config.index)
+        .pipe($.plumber())
+        .pipe($.useref({searchPath: './'}))
+        .pipe($.useref())
+        .pipe(gulp.dest(config.build));
+});
+
 gulp.task('wiredep', function () {
     var options = config.getWiredepDefaultOptions();
     var wiredep = require('wiredep').stream;

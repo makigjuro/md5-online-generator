@@ -1,6 +1,6 @@
 module.exports = function () {
     var temp = './.tmp/';
-
+    var build = './build/';
     var config = {
         temp: temp,
         alljs: [
@@ -19,7 +19,8 @@ module.exports = function () {
             json: require('./bower.json'),
             directory: './bower_components/',
             ignorePath: './'
-        }
+        },
+        build: build
     };
 
     config.getWiredepDefaultOptions = function() {
