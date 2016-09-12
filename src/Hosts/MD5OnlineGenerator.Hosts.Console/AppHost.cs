@@ -10,6 +10,7 @@ using MD5OnlineGenerator.ServiceInterface;
 using ServiceStack;
 using ServiceStack.Api.Swagger;
 using ServiceStack.Host.Handlers;
+using ServiceStack.Text;
 using ServiceStack.Validation;
 using ServiceStack.VirtualPath;
 using StructureMap;
@@ -31,6 +32,8 @@ namespace MD5OnlineGenerator.Hosts.Console
         /// </summary>
         public override void Configure(Container container)
         {
+            JsConfig.EmitCamelCaseNames = true;
+
             ConfigureIoC(container);
 
             SetConfig(new HostConfig

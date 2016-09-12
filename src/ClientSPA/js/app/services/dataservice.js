@@ -18,7 +18,7 @@
         function getMD5Checksum(url) {
             
             function getMD5ChecksumComplete(data) {
-                return data.data.Checksum;
+                return data.data.checksum;
             }
 
             return $http.post('/api/md5/',
