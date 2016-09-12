@@ -39,6 +39,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClientSPA", "ClientSPA\", "
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5OnlineGenerator.Tests", "MD5OnlineGenerator.Tests\MD5OnlineGenerator.Tests.csproj", "{BD10DBCE-CAB6-4800-AC68-06700CD51AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6D4DE06-7293-4BF4-86CC-48315AB56E76}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BD10DBCE-CAB6-4800-AC68-06700CD51AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD10DBCE-CAB6-4800-AC68-06700CD51AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD10DBCE-CAB6-4800-AC68-06700CD51AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD10DBCE-CAB6-4800-AC68-06700CD51AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +80,6 @@ Global
 		{29F89F57-87D9-49D2-BCFB-9FBF1246D42C} = {0A61BA1F-D308-41BD-8C23-111A8F4DEE36}
 		{5572A3F2-4903-4F6F-9D2A-E18FA51F8DC4} = {0A61BA1F-D308-41BD-8C23-111A8F4DEE36}
 		{894C0213-F315-4ACA-AFAC-657846AF4FEF} = {0A61BA1F-D308-41BD-8C23-111A8F4DEE36}
+		{BD10DBCE-CAB6-4800-AC68-06700CD51AA0} = {ADB7E5BC-7591-45A8-BDB5-469A5FE50A8F}
 	EndGlobalSection
 EndGlobal

@@ -15,7 +15,7 @@ namespace MD5OnlineGenerator.Hosts.Console
         static void Main(string[] args)
         {
             new AppHost().Init().Start("http://*:54236/");
-            $"ServiceStack Self Host with Razor listening at {ListeningPort}".Print();
+            $"ServiceStack Self Host listening at {ListeningPort}".Print();
             Process.Start(ListeningPort);
 
             System.Console.ReadLine();
