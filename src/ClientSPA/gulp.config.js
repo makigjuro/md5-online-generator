@@ -1,6 +1,8 @@
 module.exports = function () {
+    var temp = './.tmp/';
+
     var config = {
-        temp: './.tmp/',
+        temp: temp,
         alljs: [
             './js/**/*.js',
             './*.js'
@@ -8,11 +10,11 @@ module.exports = function () {
         client : '',
         index: 'index.html',
         less: './styles/site.less',
+        css: temp + 'site.css',
         js: [
              './js/app.js',
             './js/**/*.js'
         ],
-
         bower: {
             json: require('./bower.json'),
             directory: './bower_components/',
