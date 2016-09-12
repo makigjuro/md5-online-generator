@@ -1,4 +1,5 @@
 ﻿using System;
+using MD5OnlineGenerator.BusinessLogic.Utilities;
 using MD5OnlineGenerator.BusinessLogic.Utilities.Impl;
 using MD5OnlineGenerator.BusinessLogic.Utilities.Interfaces;
 using MD5OnlineGenerator.BusinessLogic.Validation.Impl;
@@ -29,8 +30,12 @@ namespace MD5OnlineGenerator.Hosts.Console
 
             SetConfig(new HostConfig
             {
-                DebugMode = AppSettings.Get("DebugMode", false),
-                AddRedirectParamsToQueryString = true
+#if DEBUG
+                DebugMode = true,
+                WebHostPhysicalPath = AppConfigurationManager.ClientApplicationVirtualPath.MapServerPath(),
+#endif
+                HandlerFactoryPath = "api",
+                AddRedirectParamsToQueryString = true,
             });
 
             //Config examples
@@ -39,12 +44,12 @@ namespace MD5OnlineGenerator.Hosts.Console
             Plugins.Add(new CorsFeature());
         }
 
-        public override RouteAttribute[] GetRouteAttributes(Type requestType)
-        {
-            var routes = base.GetRouteAttributes(requestType);
-            routes.Each(x => x.Path = "/api" + x.Path);
-            return routes;
-        }
+        //public override RouteAttribute[] GetRouteAttributes(Type requestType)
+        //{
+        //    var routes = base.GetRouteAttributes(requestType);
+        //    routes.Each(x => x.Path = "/api" + x.Path);
+        //    return routes;
+        //}
 
         private void ConfigureIoC(Container container)
         {

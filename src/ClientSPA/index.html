@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title ng-bind="title"></title>
+    <base href="/">
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide { display: none!important; }
+    </style>
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+
+    <link rel="stylesheet" href=".tmp/site.css" />
+</head>
+<body>
+    <div class="container" ng-controller="MD5 as vm">
+        <div class="row row-centered">
+            <div class="col-xs-12" >
+                <h2 class="marginTop">MD5 Online Checksum Generator for websites</h2>
+                <h4 class="marginTop">Enter valid url which will create a checksum from your provided web site content</h4>
+            </div>
+            <div class="col-xs-12" >
+                <section class="url-box cf marginTop">
+                    <input type="text" placeholder="Insert valid url" ng-model="vm.url">
+                    <button ng-click="vm.getMD5ChecksumHandler()" type="button">Generate</button>
+                </section>
+            </div>
+            <div class="col-xs-12" >
+                <section class="marginTop checksum-result">
+                    <label>Generated Checksum is:</label>
+                    <span ng-bind="vm.checksum"></span>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/toastr/toastr.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/app/services/dataservice.js"></script>
+    <script src="/js/app/controllers/md5Controller.js"></script>
+
+</body>
+</html>
