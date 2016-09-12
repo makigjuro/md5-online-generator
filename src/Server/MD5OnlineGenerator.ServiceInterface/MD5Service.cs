@@ -27,6 +27,8 @@ namespace MD5OnlineGenerator.ServiceInterface
                 var decodedUrl = HttpUtility.UrlDecode(request.Url);
 
                 var content = _webContentReader.ReadContentFromWebSite(decodedUrl);
+                if(string.IsNullOrEmpty(content))
+                    throw new ArgumentNullException("Content from Web Site is empty");
 
                 var checksum = _checksumGenerator.CalculateHash(content);
 
